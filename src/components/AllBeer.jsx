@@ -64,11 +64,13 @@ function AllBeer(){
       <style jsx>{`
         .allBeerStyle {
           background-color: rgb(255, 255, 255, 0.4);
-          padding: 50px;
+          padding: 25px 50px 50px 50px;
         }
         a {
           color: black;
           font-size: 20px;
+          font-weight: bold;
+          padding: 5px;
         }
         a:hover {
           color: #FFF;

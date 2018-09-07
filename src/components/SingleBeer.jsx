@@ -15,7 +15,10 @@ function SingleBeer(props){
         }
         `}</style>
       <ul>
-        <li>{props.name} | {props.brewer} | {props.description} | {props.abv} | {props.price} | {props.remaining}</li>
+        <li>{props.name}
+          <ul>
+            <li>| Brewer: {props.brewer} | Description: {props.description} | ABV: {props.abv} | ${props.price} | Remaining: {props.remaining}</li>
+          </ul></li>
       </ul>
     </div>
   );
