@@ -76,7 +76,7 @@ function AllBeer(){
           text-decoration: none;
         }
         `}</style>
-      <Link to="/beer-list">Beer List</Link>
+      <Link to="/">Full Beer List</Link>
       <br/>
       <Link to="/less-than-10">Less Than 10 pints</Link>
       <br/>
@@ -85,8 +85,16 @@ function AllBeer(){
       <Link to="/create">Add Beer</Link>
 
       <div>
+        {masterKegList.map((beer, index) =>
+          <SingleBeer name={beer.name}
+            brewer={beer.brewer}
+            description={beer.description}
+            abv={beer.abv}
+            price={beer.price}
+            remaining={beer.remaining}
+            key={index} />
+        )}
         <Switch>
-          <Route exact path='/beer-list' component={BeerList} />
           <Route exact path='/less-than-10' component={() => <SingleBeer
             name={masterKegList[5].name}
             brewer={masterKegList[5].brewer}

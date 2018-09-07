@@ -1,9 +1,8 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
-import BeerList from './BeerList';
+import PropTypes from 'prop-types';
 import SingleBeer from './SingleBeer';
 
-function App(){
+function BeerList(){
   return (
     <div>
       {masterKegList.map((beer, index) =>
@@ -19,4 +18,13 @@ function App(){
   );
 }
 
-export default App;
+BeerList.propTypes = {
+  name: PropTypes.string.isRequired,
+  brewer: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  abv: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  remaining: PropTypes.string.isRequired
+};
+
+export default BeerList;
