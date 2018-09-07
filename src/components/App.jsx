@@ -8,6 +8,7 @@ function App(){
     <div>
       <style jsx>{`
         body {
+          font-family: monospace;
           background-image: url(${bg});
           background-size: cover;
           background-repeat: no-repeat;

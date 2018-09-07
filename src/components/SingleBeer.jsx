@@ -6,10 +6,8 @@ function SingleBeer(props){
     <div className="infoBg">
       <style jsx>{`
         .infoBg {
-          font-family: monospace;
-          color: #FFF;
           font-size: 20px;
-          background-color: rgb(255, 255, 255, 0.6);
+          background-color: rgb(255, 255, 255, 0.4);
           padding: 25px;
         }
         li {
@@ -17,12 +15,7 @@ function SingleBeer(props){
         }
         `}</style>
       <ul>
-        <li>{props.name}</li>
-        <li>{props.brewer}</li>
-        <li>{props.description}</li>
-        <li>{props.abv}</li>
-        <li>{props.price}</li>
-        <li>{props.remaining}</li>
+        <li>{props.name} | {props.brewer} | {props.description} | {props.abv} | {props.price} | {props.remaining}</li>
       </ul>
     </div>
   );
