@@ -31,6 +31,15 @@ As an employee, I want the option to edit a keg's properties after entering them
 
 * As a patron, I want to use the alcohol content property to display stronger beers differently than weaker beers.
 
+## Components and Routes Structure
+
+App __ Header
+  |___ Routes
+          |--"/" -- AllBeer
+          |--"/less-than-10" -- AllBeer -- SingleBeer
+          |--"/low-price" -- AllBeer -- Single
+          |--"/create" -- NewBeer
+
 ### License
 
 *This software is licensed under the MIT license.
