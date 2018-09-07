@@ -1,6 +1,8 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
+import BeerList from './BeerList';
 import SingleBeer from './SingleBeer';
+import NewBeer from './NewBeer';
 
 const masterKegList = [
     {
@@ -58,26 +60,33 @@ function AllBeer(){
     backgroundColor: 'rgb(255, 255, 255, 0.4)'
   }
   return (
-    <div style={allBeerStyle}>
-      <br/>
-      <Link to="/">Beer List</Link>
+    <div className="allBeerStyle">
+      <style jsx>{`
+        .allBeerStyle {
+          background-color: rgb(255, 255, 255, 0.4);
+          padding: 50px;
+        }
+        a {
+          color: black;
+          font-size: 20px;
+        }
+        a:hover {
+          color: #FFF;
+          background-color: rgb(0, 0, 0, 0.5);
+          text-decoration: none;
+        }
+        `}</style>
+      <Link to="/beer-list">Beer List</Link>
       <br/>
       <Link to="/less-than-10">Less Than 10 pints</Link>
       <br/>
       <Link to="/low-price">Less than $5</Link>
       <br/>
+      <Link to="/create">Add Beer</Link>
 
       <div>
-        {masterKegList.map((beer, index) =>
-          <SingleBeer name={beer.name}
-            brewer={beer.brewer}
-            description={beer.description}
-            abv={beer.abv}
-            price={beer.price}
-            remaining={beer.remaining}
-            key={index} />
-        )}
         <Switch>
+          <Route exact path='/beer-list' component={BeerList} />
           <Route exact path='/less-than-10' component={() => <SingleBeer
             name={masterKegList[5].name}
             brewer={masterKegList[5].brewer}
@@ -92,6 +101,7 @@ function AllBeer(){
             abv={masterKegList[2].abv}
             price={masterKegList[2].price}
             remaining={masterKegList[2].remaining} />} />
+          <Route exact path='/create' component={NewBeer} />
         </Switch>
       </div>
     </div>

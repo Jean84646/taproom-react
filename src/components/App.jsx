@@ -2,6 +2,7 @@ import React from 'react';
 import bg from './../img/bg1.jpg';
 import Header from './Header';
 import AllBeer from './AllBeer';
+import { Switch, Route, Link } from 'react-router-dom';
 
 function App(){
   return (
