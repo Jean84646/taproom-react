@@ -5,13 +5,13 @@ function Header() {
     <div>
       <style jsx>{`
         h1 {
-          font-size: 100px;
-          text-align: center;
+          font-family: monospace;
+          font-size: 5em;
           color: #FFF;
         }
         `}</style>
         <div>
-          <h1>Taproom</h1>
+          <h1>Welcome to the Tap Room!</h1>
         </div>
     </div>
   );

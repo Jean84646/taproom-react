@@ -3,9 +3,6 @@ import bg from './../img/bg1.jpg';
 import Header from './Header';
 
 function App(){
-  var containerStyle = {
-    backgroundColor: 'rgb(255, 255, 255, 0.4)'
-  }
   return (
     <div>
       <style jsx>{`
@@ -17,6 +14,7 @@ function App(){
         `}</style>
       <div className="container">
         <Header/>
+        <AllBeer/>
       </div>
     </div>
 
