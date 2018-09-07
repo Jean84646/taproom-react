@@ -83,7 +83,7 @@ module.exports = {
      favicon: 'src/img/favicon.ico',
      template:'template.ejs',
      appMountId: 'react-app-root',
-     title: "Crazy Rich Asians Bio",
+     title: "Taproom",
      filename: resolve(__dirname, "build", "index.html"),
    }),
   ]
