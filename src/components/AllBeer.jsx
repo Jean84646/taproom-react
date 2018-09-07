@@ -71,13 +71,12 @@ function AllBeer(){
 
       <Switch>
         <Route exact path='/all-beer' component={() => <SingleBeer
-          'is a loop'
-          name={masterKegList[0].name}
-          brewer={masterKegList[0].brewer}
-          description={masterKegList[0].description}
-          abv={masterKegList[0].abv}
-          price={masterKegList[0].price}
-          remaining={masterKegList[0].remaining} />} />
+          name={masterKegList.name}
+          brewer={masterKegList.brewer}
+          description={masterKegList.description}
+          abv={masterKegList.abv}
+          price={masterKegList.price}
+          remaining={masterKegList.remaining} />} />
         <Route exact path='/less-than-10' component={() => <SingleBeer
           name={masterKegList[5].name}
           brewer={masterKegList[5].brewer}
