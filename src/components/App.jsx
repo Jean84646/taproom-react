@@ -1,7 +1,7 @@
 import React from 'react';
 import bg from './../img/bg1.jpg';
 import Header from './Header';
-import AllBeer from './AllBeer';
+import BeerInfo from './BeerInfo';
 import { Switch, Route, Link } from 'react-router-dom';
 
 function App(){
@@ -17,7 +17,7 @@ function App(){
         `}</style>
       <div className="container">
         <Header/>
-        <AllBeer/>
+        <BeerInfo/>
       </div>
     </div>
 

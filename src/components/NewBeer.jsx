@@ -9,8 +9,12 @@ function NewBeer(){
           background-color: rgb(255, 255, 255, 0.4);
           padding: 25px;
         }
-        li {
-          list-style: none;
+        p {
+          font-weight: bold;
+          text-decoration: underline;
+        }
+        input {
+          margin: 0px 10px 0px 20px;
         }
         `}</style>
       <form>
