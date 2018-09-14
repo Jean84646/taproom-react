@@ -33,12 +33,7 @@ As an employee, I want the option to edit a keg's properties after entering them
 
 ## Components and Routes Structure
 
-App __ Header
-  |___ Routes
-          |--"/" -- AllBeer
-          |--"/less-than-10" -- AllBeer -- SingleBeer
-          |--"/low-price" -- AllBeer -- Single
-          |--"/create" -- NewBeer
+![Component Route and Structure](taproom_structure.png)
 
 ### License
 

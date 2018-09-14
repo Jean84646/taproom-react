@@ -20,7 +20,6 @@ function App(){
         <BeerInfo/>
       </div>
     </div>
-
   );
 }
 

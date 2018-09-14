@@ -44,7 +44,7 @@ const state = {
       description: 'India Pale Ale',
       abv:  '7.5%',
       price: '6',
-      remaining: '18'
+      remaining: '8'
     },
     {
       name: '8 Hop',
@@ -91,12 +91,12 @@ function BeerInfo(){
       <Switch>
         <Route exact path='/full-list' component={BeerList} />
         <Route exact path='/less-than-10' component={() => <SingleBeer
-          name={state.masterKegList[5].name}
-          brewer={state.masterKegList[5].brewer}
-          description={state.masterKegList[5].description}
-          abv={state.masterKegList[5].abv}
-          price={state.masterKegList[5].price}
-          remaining={state.masterKegList[5].remaining} />} />
+          name={state.masterKegList[4].name}
+          brewer={state.masterKegList[4].brewer}
+          description={state.masterKegList[4].description}
+          abv={state.masterKegList[4].abv}
+          price={state.masterKegList[4].price}
+          remaining={state.masterKegList[4].remaining} />} />
         <Route exact path='/low-price' component={() => <SingleBeer
           name={state.masterKegList[2].name}
           brewer={state.masterKegList[2].brewer}
