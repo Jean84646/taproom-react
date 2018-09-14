@@ -10,11 +10,14 @@ function Header() {
           font-size: 5em;
           color: #FFF;
         }
+        a {
+          font-size: 16px;
+        }
         `}</style>
         <div>
           <h1>Welcome to the Tap Room!</h1>
         </div>
-        <div className="navbar">
+        <div>
           <Link to="/">Home</Link> | <Link to="/newbeer">Add New Beer</Link>
         </div>
     </div>

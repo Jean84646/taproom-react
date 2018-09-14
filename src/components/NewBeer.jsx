@@ -35,10 +35,11 @@ function NewBeer(props){
           text-decoration: underline;
         }
         input {
-          margin: 0px 10px 0px 20px;
+          width: 50%;
+          margin: 10px;
         }
         `}</style>
-      <form onSubmit={hangleAddNewBeer}>
+      <form onSubmit={handleAddNewBeer}>
         <p>Add New Beer</p>
         <input type="text" placeholder="Beer Name" ref={(input) => {newName = input;}} />
         <input type="text" placeholder="Brewer" ref={(input) => {newBrewer = input;}} />
