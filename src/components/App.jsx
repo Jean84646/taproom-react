@@ -4,7 +4,7 @@ import Header from './Header';
 import BeerList from './BeerList';
 import NewBeer from './NewBeer';
 import Error404 from './Error404';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +17,8 @@ class App extends React.Component {
           description: 'Sparkling Wine & Grapefruit',
           abv: '6.8%',
           price: '7',
-          remaining: '20'
+          remaining: '20',
+          id: '0'
         },
         {
           name: 'Tart N Juicy',
@@ -25,7 +26,8 @@ class App extends React.Component {
           description: 'Sour IPA',
           abv: '4.5%',
           price: '6',
-          remaining: '60'
+          remaining: '60',
+          id: '1'
         },
         {
           name: 'Hamm\'s',
@@ -33,7 +35,8 @@ class App extends React.Component {
           description: 'American Lager',
           abv: '4.7%',
           price: '3',
-          remaining: '65'
+          remaining: '65',
+          id: '2'
         },
         {
           name: 'Prismatic',
@@ -41,7 +44,8 @@ class App extends React.Component {
           description: 'Juicy IPA',
           abv:  '5.9%',
           price: '6',
-          remaining: '75'
+          remaining: '75',
+          id: '3'
         },
         {
           name: 'Juicy Haze',
@@ -49,7 +53,8 @@ class App extends React.Component {
           description: 'India Pale Ale',
           abv:  '7.5%',
           price: '6',
-          remaining: '18'
+          remaining: '18',
+          id: '4'
         },
         {
           name: '8 Hop',
@@ -57,11 +62,21 @@ class App extends React.Component {
           description: 'Pale Ale',
           abv:  '5.5%',
           price: '6',
-          remaining: '58'
+          remaining: '58',
+          id: '5'
         }
       ]
-    }
+    };
+    this.handleAddNewBeer = this.handleAddNewBeer.bind(this);
+  }
 
+  handleAddNewBeer(newBeer){
+    let newBeerList = this.state.masterKegList.slice();
+    newBeerList.push(newBeer);
+    this.setState({masterKegList: newBeerList})
+  }
+
+  render(){
   return (
     <div>
       <style jsx>{`
@@ -76,7 +91,7 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact path='/' render={()=><BeerList beerList={this.state.masterKegList} />} />
-          <Route exact path='/newbeer' render={()=><NewBeer/>} />
+          <Route exact path='/newbeer' render={()=><NewBeer onAddNewBeer={this.handleAddNewBeer}/>} />
           <Route component={Error404} />
         </Switch>
       </div>

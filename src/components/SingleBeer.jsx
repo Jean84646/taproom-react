@@ -36,7 +36,8 @@ SingleBeer.propTypes = {
   description: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  remaining: PropTypes.string.isRequired
+  remaining: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
 };
 
 export default SingleBeer;
