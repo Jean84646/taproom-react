@@ -2,6 +2,8 @@ import React from 'react';
 import bg from './../img/bg1.jpg';
 import Header from './Header';
 import BeerList from './BeerList';
+import NewBeer from './NewBeer';
+import Error404 from './Error404';
 import { Switch, Route, Link } from 'react-router-dom';
 
 class App extends React.Component {
@@ -73,11 +75,14 @@ class App extends React.Component {
       <div className="container">
         <Header/>
         <Switch>
-          <Route exact path='/' render={()=><BeerList beerList={this.state.masterKegList}
+          <Route exact path='/' render={()=><BeerList beerList={this.state.masterKegList} />} />
+          <Route exact path='/newbeer' render={()=><NewBeer/>} />
+          <Route component={Error404} />
         </Switch>
       </div>
     </div>
   );
+}
 }
 
 export default App;
