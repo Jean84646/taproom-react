@@ -2,11 +2,11 @@
 
 #### A beer keg application.
 
-#### By Jean Jia, 09.07.2018_
+#### By Jean Jia, 09/14/2018_
 
 ## Description
 
-Tap Room is an application that allows a user to view a list of beer and add and edit its contents.
+Tap Room is an application that allows a user to view a list of beer inventory and add new beer to the list. Updated on 09/14/2018.
 
 ## Setup
 
@@ -16,24 +16,23 @@ Tap Room is an application that allows a user to view a list of beer and add and
 
 ## Specification
 
-* As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
+* As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and alcohol content.
 
-* As an employee, I want to fill out a form when I tap a new keg to add it to the list. (Don't worry about authenticating employee user accounts yet.)
-As an employee, I want the option to edit a keg's properties after entering them just in case I make a mistake.
+* As an employee, I want to fill out a form when I tap a new keg to add it to the list.
 
-* As a patron and/or employee, I want to see how many pints are left in a keg. (Hint: A full keg has roughly 124 pints).
+* As a patron and/or employee, I want to see how many pints are left in a keg.
 
 * As an employee, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1.
 
 * As an employee, I want to be able to see kegs with less than 10 pints left so I can be ready to change them.
 
-* As a patron, I want to have kegs prices to be color-coded for easy readability. Perhaps based on their price (greater or less than $5 per pint, perhaps) or the particular style of beer or kombucha.
+* As a patron, I want to have kegs prices to be color-coded for easy readability on beers less than $5 per pint.
 
 * As a patron, I want to use the alcohol content property to display stronger beers differently than weaker beers.
 
 ## Components and Routes Structure
 
-(taproom-structure.png)
+![Component Route and Structure](taproom-structure.png)
 
 ### License
 
