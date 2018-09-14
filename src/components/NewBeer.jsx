@@ -13,13 +13,12 @@ function NewBeer(props){
 
   function handleAddNewBeer(event){
     event.preventDefault();
-    props.onAddNewBeer({name: newName.value, brewer: newBrewer.value, description: newDescription.value, abv: newAbv.value, price: newPrice.value, remaining: newRemaining.value, id: v4()});
+    props.onAddNewBeer({name: newName.value, brewer: newBrewer.value, description: newDescription.value, abv: newAbv.value, price: newPrice.value, remaining: 100, id: v4()});
     newName.value = "";
     newBrewer.value = "";
     newDescription.value = "";
-    newAbv.value = 0;
-    newPrice.value = 0;
-    newRemaining.value = 0;
+    newAbv.value = "";
+    newPrice.value = "";
   }
 
   return(
@@ -46,7 +45,6 @@ function NewBeer(props){
         <input type="text" placeholder="Description" ref={(input) => {newDescription = input;}} />
         <input type="text" placeholder="ABV" ref={(input) => {newAbv = input;}} />
         <input type="text" placeholder="Price" ref={(input) => {newPrice = input;}} />
-        <input type="text" placeholder="Remaining" ref={(input) => {newRemaining = input;}} />
         <button type='submit'>ADD</button>
       </form>
     </div>
