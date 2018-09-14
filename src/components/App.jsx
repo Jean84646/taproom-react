@@ -68,12 +68,45 @@ class App extends React.Component {
       ]
     };
     this.handleAddNewBeer = this.handleAddNewBeer.bind(this);
+    this.handleClickSellPint = this.handleClickSellPint.bind(this);
+    this.handleClickSellGrowler = this.handleClickSellGrowler.bind(this);
+    this.handleClickSellLgGrowler = this.handleClickSellLgGrowler.bind(this);
   }
 
   handleAddNewBeer(newBeer){
     let newBeerList = this.state.masterKegList.slice();
     newBeerList.push(newBeer);
     this.setState({masterKegList: newBeerList})
+  }
+
+  handleClickSellPint(id){
+    let newBeerList = this.state.masterKegList.slice();
+    newBeerList.map((drink) => {
+      if(drink.id === id) {
+        drink.remaining--;
+      }
+    });
+    this.setState({masterKegList: newBeerList});
+  }
+
+  handleClickSellGrowler(id){
+    let newBeerList = this.state.masterKegList.slice();
+    newBeerList.map((drink) => {
+      if(drink.id === id) {
+        drink.remaining -= 2;
+      }
+    });
+    this.setState({masterKegList: newBeerList});
+  }
+
+  handleClickSellLgGrowler(id){
+    let newBeerList = this.state.masterKegList.slice();
+    newBeerList.map((drink) => {
+      if(drink.id === id) {
+        drink.remaining -= 4;
+      }
+    });
+    this.setState({masterKegList: newBeerList});
   }
 
   render(){
@@ -90,7 +123,10 @@ class App extends React.Component {
       <div className="container">
         <Header/>
         <Switch>
-          <Route exact path='/' render={()=><BeerList beerList={this.state.masterKegList} />} />
+          <Route exact path='/' render={()=><BeerList beerList={this.state.masterKegList}
+                                                      onClickSellPint={this.handleClickSellPint}
+                                                      onClickSellGrowler={this.handleClickSellGrowler}
+                                                      onClickSellLgGrowler={this.handleClickSellLgGrowler}/>} />
           <Route exact path='/newbeer' render={()=><NewBeer onAddNewBeer={this.handleAddNewBeer}/>} />
           <Route component={Error404} />
         </Switch>

@@ -12,14 +12,20 @@ function BeerList(props){
           abv={beer.abv}
           price={beer.price}
           remaining={beer.remaining}
-          key={beer.id} />
-      )}
+          id={beer.id}
+          onClickSellPint={props.onClickSellPint}
+          onClickSellGrowler={props.onClickSellGrowler}
+          onClickSellLgGrowler={props.onClickSellLgGrowler}
+          key={beer.id} />)}
     </div>
   );
 }
 
 BeerList.propTypes = {
-  beerList: PropTypes.array.isRequired
+  beerList: PropTypes.array.isRequired,
+  onClickSellPint: PropTypes.func,
+  onClickSellGrowler: PropTypes.func,
+  onClickSellLgGrowler: PropTypes.func
 };
 
 export default BeerList;

@@ -9,7 +9,6 @@ function NewBeer(props){
   let newDescription = null;
   let newAbv = null;
   let newPrice = null;
-  let newRemaining = null;
 
   function handleAddNewBeer(event){
     event.preventDefault();
