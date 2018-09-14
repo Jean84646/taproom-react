@@ -42,13 +42,17 @@ function SingleBeer(props){
           font-weight: bold;
         }
         .warningOne {
-          background-color: yellow;
+          background-color: #fceda4;
         }
         .warningTwo {
-          background-color: green;
+          background-color: #abfcf8;
         }
         .warningThree {
-          background-color: red;
+          background-color: #f99d93;
+        }
+        .sell-button {
+          padding: 1px 5px 1px 5px;
+          margin-left: 10px;
         }
         `}</style>
       <div>
@@ -58,9 +62,9 @@ function SingleBeer(props){
             <li className={bgOne}>| ABV: {props.abv}% |</li>
             <li className={bgTwo}>| Price: ${props.price} |</li>
             <li className={bgThree}>| Remaining: {props.remaining} |</li>
-            <li>Sell: <button onClick={handleClickSellPint} className="btn">Pint</button>
-                      <button onClick={handleClickSellGrowler} className="btn">Growler</button>
-                      <button onClick={handleClickSellLgGrowler} className="btn">Large Growler</button>
+            <li>Sell: <button onClick={handleClickSellPint} className="btn sell-button">Pint</button>
+                      <button onClick={handleClickSellGrowler} className="btn sell-button">Growler</button>
+                      <button onClick={handleClickSellLgGrowler} className="btn sell-button">Large Growler</button>
             </li>
           </ul>
       </div>
