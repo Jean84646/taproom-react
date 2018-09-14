@@ -33,7 +33,7 @@ As an employee, I want the option to edit a keg's properties after entering them
 
 ## Components and Routes Structure
 
-![Component Route and Structure](taproom-structure.png)
+(taproom-structure.png)
 
 ### License
 
