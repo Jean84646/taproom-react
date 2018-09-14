@@ -3,48 +3,52 @@ import PropTypes from 'prop-types';
 
 function SingleBeer(props){
 
-  let Bg = "";
+  let bgOne = "";
+  let bgTwo = "";
+  let bgThree = "";
+  if(props.abv < 5) {
+    bgOne = "warningOne";
+  }
   if(props.price < 5) {
-    Bg = "warningOne";
-  } else if(props.remaining < 10) {
-    Bg = "warningTwo";
-  } else if(props.abv < 5) {
-    Bg = "warningThree";
+    bgTwo = "warningTwo";
+  }
+  if(props.remaining < 10) {
+    bgThree = "warningThree";
   }
 
   return(
     <div className="infoBg">
       <style jsx>{`
         .infoBg {
-          font-size: 20px;
+          font-size: 16px;
           background-color: rgb(255, 255, 255, 0.5);
           padding: 10px;
         }
-        li {
+        ul li {
           list-style: none;
+        }
+        h4 {
+          margin-left: 30px;
           font-weight: bold;
         }
-        .listStyle {
-          font-size: 16px;
-          font-weight: normal;
-        }
         .warningOne {
-          background-color: green;
-        }
-        .warningTwo {
-          background-color: red;
-        }
-        .warningThree {
           background-color: yellow;
         }
+        .warningTwo {
+          background-color: green;
+        }
+        .warningThree {
+          background-color: red;
+        }
         `}</style>
-      <div className={Bg}>
-        <ul>
-          <li>{props.name}
-            <ul>
-              <li className="listStyle">| Brewer: {props.brewer} | Description: {props.description} | ABV: {props.abv}% | ${props.price} | Remaining: {props.remaining} |</li>
-            </ul></li>
-        </ul>
+      <div>
+        <h4>{props.name}</h4>
+          <ul>
+            <li>| Brewer: {props.brewer} | Description: {props.description} |</li>
+            <li className={bgOne}>| ABV: {props.abv}% |</li>
+            <li className={bgTwo}>| Price: ${props.price} |</li>
+            <li className={bgThree}>| Remaining: {props.remaining} |</li>
+          </ul>
       </div>
     </div>
   );
