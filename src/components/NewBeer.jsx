@@ -42,7 +42,7 @@ function NewBeer(props){
         <input type="text" placeholder="Beer Name" ref={(input) => {newName = input;}} />
         <input type="text" placeholder="Brewer" ref={(input) => {newBrewer = input;}} />
         <input type="text" placeholder="Description" ref={(input) => {newDescription = input;}} />
-        <input type="text" placeholder="ABV" ref={(input) => {newAbv = input;}} />
+        <input type="text" placeholder="ABV %" ref={(input) => {newAbv = input;}} />
         <input type="text" placeholder="Price" ref={(input) => {newPrice = input;}} />
         <button type='submit'>ADD</button>
       </form>
