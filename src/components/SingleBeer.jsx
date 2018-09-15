@@ -42,13 +42,13 @@ function SingleBeer(props){
           font-weight: bold;
         }
         .warningOne {
-          background-color: #fceda4;
+          background-color: #f9b74e;
         }
         .warningTwo {
-          background-color: #abfcf8;
+          background-color: #4fd67e;
         }
         .warningThree {
-          background-color: #f99d93;
+          background-color: #f26135;
         }
         .sell-button {
           padding: 1px 5px 1px 5px;
